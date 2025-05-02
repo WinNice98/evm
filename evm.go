@@ -13,6 +13,6 @@ func NewEVM(name, cpu string, ram uint64) *EVM {
 }
 
 func (e *EVM) ShowSpecs() string {
-	return e.Name + " | CPU: " + e.CPU + " | RAM: " + fmt.Sprint(e.RAM) + " GB"
+	return fmt.Sprintf("Name: %s, CPU: %s, RAM: %dMB", e.Name, e.CPU, e.RAM)
 }
 
